@@ -1,8 +1,48 @@
 {
 	"auth": {
-		"cognitocf0c6096": {
+		"ReactAppAuthAmplify": {
 			"service": "Cognito",
-			"providerPlugin": "awscloudformation"
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"function": {
+		"AdminQueriesff62b7b1": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true,
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "ReactAppAuthAmplify",
+					"attributes": [
+						"UserPoolId"
+					]
+				}
+			]
+		}
+	},
+	"api": {
+		"AdminQueries": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "auth",
+					"resourceName": "ReactAppAuthAmplify",
+					"attributes": [
+						"UserPoolId"
+					]
+				},
+				{
+					"category": "function",
+					"resourceName": "AdminQueriesff62b7b1",
+					"attributes": [
+						"Arn",
+						"Name"
+					]
+				}
+			]
 		}
 	}
 }

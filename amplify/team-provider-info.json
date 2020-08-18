@@ -1,0 +1,22 @@
+{
+    "devt": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-authcra-devt-53410-authRole",
+            "UnauthRoleArn": "arn:aws:iam::569689137305:role/amplify-authcra-devt-53410-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::569689137305:role/amplify-authcra-devt-53410-authRole",
+            "Region": "ap-northeast-1",
+            "DeploymentBucketName": "amplify-authcra-devt-53410-deployment",
+            "UnauthRoleName": "amplify-authcra-devt-53410-unauthRole",
+            "StackName": "amplify-authcra-devt-53410",
+            "StackId": "arn:aws:cloudformation:ap-northeast-1:569689137305:stack/amplify-authcra-devt-53410/73436f90-dc5d-11ea-b48e-0a50f89864ca",
+            "AmplifyAppId": "d3k34y64xwqv9u"
+        },
+        "categories": {
+            "auth": {
+                "ReactAppAuthAmplify": {
+                    "hostedUIProviderCreds": "[]"
+                }
+            }
+        }
+    }
+}
